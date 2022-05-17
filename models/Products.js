@@ -1,5 +1,5 @@
 let products = [
-    {id: "1", "slug": "nike-shoes", "name": "Nike-shoes"}
+    {id: "1", "slug": "nike-shoes", "name": "Nike-shoes", "price": 87}
 ]
 
 const all = () => {
@@ -10,8 +10,9 @@ const find = (id) => {
     return products.find(p => p.id === id)
 }
 const create = (product) => {
-    products.push(product)
-    return products
+    const id = Number(products[products.length - 1].id) + 1 + ""
+    products.push({ id, ...product })
+    return products[products.length - 1]
 }
 
 const update = (id, product) => {
