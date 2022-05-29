@@ -4,11 +4,23 @@
     {% endif %}
     <div>
         <label for="title">title:</label>
-        <input type="text" name="title" id="title"value="{{ product.title }}"/>
+        <input type="text" name="title" id="title" value="{{ product.title }}"/>
+    </div>
+    <div>
+        <label for="slug">slug:</label>
+        <input type="text" name="slug" id="slug" value="{{ product.slug }}"/>
     </div>
     <div>
         <label for="price">Price:</label>
-        <input type="number" name="price" id="price"value="{{ product.price }}"/>
+        <input type="number" name="price" id="price" value="{{ product.price }}"/>
+    </div>
+    <div>
+		<label>Is Published?</label>
+		<input type="checkbox" name="is_published" id="is_published" value="true" {% if product.is_published %}checked="checked"{% endif %} />
+	</div>
+    <div>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" value="{{ product.description }}">{{ product.description }}</textarea>
     </div>
     <div>
         <input type="submit" name="submit"/>
