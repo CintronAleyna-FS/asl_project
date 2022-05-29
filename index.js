@@ -16,6 +16,7 @@ app.get('/', (req, res) =>{
 app.use("/products", productRouter)
 app.use("/variants", variantsRouter)
 app.use("/images", imagesRouter)
+app.use(express.static('public'))
 
 app.listen(3000);
 
