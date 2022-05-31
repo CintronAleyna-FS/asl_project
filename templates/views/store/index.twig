@@ -1,0 +1,28 @@
+{% extends 'layouts/base.twig' %}
+
+{% block title %} All Squishmellows {% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+{% endblock %}	
+
+{% block main_content %}
+	<main class="container max-w-4xl m-auto">
+		<h1 class='text-3xl p-8 text-center txt-big-purp'>Shop Squishmellows</h1>
+		<div class="container flex flex-row justify-around">
+			{% for product in products %}
+				<div id="products-container" class="flex flex-row space-x-2 p-6 w-11/12" >
+					<div class="max-w-sm rounded overflow-hidden shadow-lg">
+							<a href="/store/products/{{product.slug}}">
+								<img class="w-auto h-48 m-auto" src="/public/images/{{ product.Variants[0].Images[0].id }}{{ product.Variants[0].Images[0].extension }}">
+							</a>
+						<div class="px-6 py-4">
+							<div class="font-bold text-xl mb-2 txt-big-purp">{{product.title}}</div>
+							<p class="text-gray-700 text-base">{{product.description}}</p>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</main>
+{% endblock %}

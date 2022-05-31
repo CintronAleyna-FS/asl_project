@@ -8,24 +8,24 @@ module.exports = {
     return await queryInterface.bulkInsert('Products', [
       { 
         id: 1, 
-        title: 'Squishmellow Animal', 
-        slug: 'squishmellow-animal', 
+        title: 'Animal Squishmellow', 
+        slug: 'animal-squishmellow', 
         price: 50.78, 
         is_published: true,
         description, createdAt, updatedAt
       },
       { 
         id: 2, 
-        title: 'Squishmellow Food', 
-        slug: 'squishmellow-food', 
+        title: 'Food Squishmellow', 
+        slug: 'food-squishmellow', 
         price: 35.78, 
         is_published: true,
         description, createdAt, updatedAt
       },
       { 
         id: 3, 
-        title: 'Squishmellow Disney Character', 
-        slug: 'squishmellow-disney-character', 
+        title: 'Disney Character Squishmellow', 
+        slug: 'disney-character-squishmellow', 
         price: 89.78, 
         is_published: true,
         description, createdAt, updatedAt
